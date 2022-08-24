@@ -1,15 +1,27 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for(let element of array){
+    if(array.includes(target - element) && array.indexOf(target - element) !== array.lastIndexOf(element)){
+      return true
+    }
+  }
+  return false
 }
 
 /* 
   Write the Big O time complexity of your function here
+  O(n)
 */
 
 /* 
   Add your pseudocode here
+  iterate over array
+    difference= target - value at index
+    if array contains difference 
+      return true
+  return false
 */
-
+//if the sum of two elements equals the target return true. else return false
 /*
   Add written explanation of your solution here
 */
